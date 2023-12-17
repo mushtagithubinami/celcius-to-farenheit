@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url(imag/tempera.jpg);
+
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        form {
+            width: 800px;
+            margin: 0 auto;
+            border: solid 1px lightgray;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 200px;
+            /*background: rgb(234, 230, 230)*/
+        }
+
+        .cel {
+            padding: 13px;
+            border-radius: 10px;
+            border: solid 1px lightgray;
+            width: 45%;
+            margin-left: 2.5%;
+        }
+
+        
+    </style>
+    <title>Temperature Convertor Using a javascript</title>
+</head>
+
+<body>
+    <form action="">
+        <h1 style="font-family: cursive; text-align:center; font-weight: bold; color: purple; margin-bottom: 20px;">
+            Temperature Convertor
+        </h1>
+        <input type="text" id="celcius" class="cel" placeholder="Celcius" onblur="celciusToFaren();">
+        <input type="text" id="farenhiet" class="cel" placeholder="farenhiet" onblur="farenhietTocelcius();">
+    </form>
+    <script>
+        function celciusToFaren() {
+            var c = parseFloat(document.getElementById("celcius").value)
+            var f = (9 * c / 5) + 32
+            if (isNaN(c)) {
+                document.getElementById("celcius").value = "Celsius"
+                //no value in the c then result will be show farenhiet
+            }
+            else {
+                document.getElementById("farenhiet").value = f + "   " + "Fahrenhiet"
+            }
+        }
+
+    </script>
+</body>
+
+</html>
