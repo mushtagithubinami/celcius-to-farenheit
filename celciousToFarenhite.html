@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">   
+    <style>
+       .converter
+       {
+        margin-top: 200px;
+       
+       }
+       *
+       {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+       }
+       body
+        {
+            background: url(imag/tempera.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        
+        }
+        #inputFahrenheit
+        {
+            width: 25%;   
+            padding: 12px 20px;   
+            display: inline-block;      
+            border-radius:20px;
+            padding: 10px;
+        }
+       .temper
+       {
+        font-family: Ubuntu;
+        color: rgb(112, 11, 112);
+       }
+    </style>
+    <title>Celcious To Farenhite Using a javascript</title>
+</head>
+<body>
+<!-- <script>
+    /*Math.round() rounds a number to the nearest integer*/
+    function convert(degree)
+    {
+        var x;
+        if (degree == "C") {
+            x = document.getElementById("c").value * 9 / 5 + 32;
+            document.getElementById("f").value = Math.round(x);
+        } 
+        else 
+        {
+            x = (document.getElementById("f").value -32) * 5 / 9;
+            document.getElementById("c").value = Math.round(x);
+        }
+    }
+</script>
+    <h1>JavaScript Celcius to Fahrenhet</h1>
+    <p><input id="c" onkeyup="convert('C')"> Celsius</p>
+    <p><input id="f" onkeyup="convert('F')"> Fahrenheit</p>  -->
+ 
+    <!-- <table border=3 align="center" cellpadding="0" cellspacing="0">
+    <tr >
+        <td>CELSIUS</td>
+        <td>FAHRENHEIT</td>
+    </tr>
+    <script>
+    for (celsius=0; celsius<=50; celsius++)
+    {
+    document.write("<tr><td>"+celsius+"</td><td>"
+    +((celsius*9/5)+32)+"</td></tr>")
+    }
+    </script>
+    </table> -->
+    <div class="converter">
+        <h1 style="text-align: center; font-size: 50px;" class="temper">Temperature Converter</h1>
+        <br><br>
+    <p style="text-align: center;">
+        <label style="font-size: 25px;font-weight: bold;" class="temper">&nbsp;&nbsp; Fahrenheit</label>
+            <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+    </p><br>
+
+    <p style="text-align: center; font-size: 25px; font-weight: bold;" class="temper">Celcius: <span id="outputCelcius"></span></p> 
+    </div>
+    
+
+    <script>
+        function temperatureConverter(valNum)
+        {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+        }
+    </script>
+</body>
+</html>
